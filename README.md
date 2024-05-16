@@ -4,3 +4,7 @@
  **NOTE: you need to be connected to wifi so gtts can use the ai model api (you can't use it offline)**
 
  **🪶🪶🪶**
+
+ **dependencies installtion comand**
+
+'''pip install -r requirements. txt '''
