@@ -8,20 +8,57 @@
 <body>
     <style>
         body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
             text-align: center;
         }
         #button{
             border-radius: 100px;
-            size: 100px;
+            padding: 10px 20px; 
+            color: red;
+            background: black;
+            border: none;
+            
+        }
+        textarea {
+            outline-color: red;
+            margin-bottom: 10px; /* Add margin to create space between textarea and button */
+        }
+        #form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
+
     </style>
+    <div class="container">
     <h1>Texeech</h1>
     {% if request.method == 'GET' %}
+    <br>
     <form name="form" method="POST" action="{{ url_for('index') }}" class="form">
+        
         <textarea rows="10" cols="100" name="text" name="text"></textarea>
+        <br>
         <button type="submit" id="button">submit</button>
     </form>
+    </div>
     {% endif %}
+
 </body>
 </html>

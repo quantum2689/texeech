@@ -21,7 +21,7 @@ def index():
     if request.method == 'POST':
         text = request.form["text"]
         filepath = audio(text,"en")
-        return send_file(filepath)
+        return send_file(filepath,as_attachment=True)
 
 
     
