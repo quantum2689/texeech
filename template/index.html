@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>texeech</title>
+</head>
+<body>
+    <style>
+        body{
+            text-align: center;
+        }
+        #button{
+            border-radius: 100px;
+            size: 100px;
+        }
+
+    </style>
+    <h1>Texeech</h1>
+    {% if request.method == 'GET' %}
+    <form name="form" method="POST" action="{{ url_for('index') }}" class="form">
+        <textarea rows="10" cols="100" name="text" name="text"></textarea>
+        <button type="submit" id="button">submit</button>
+    </form>
+    {% endif %}
+</body>
+</html>
