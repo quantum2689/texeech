@@ -1,0 +1,12 @@
+if you want to docker this project first you need to install docker you can install it from docker desktop
+then go to the directroy of this project and run the following command:
+
+>> docker build . -t texeech
+
+
+then go to http://127.0.0.1:5100/
+if you find This site can’t be reached127.0.0.1 refused to connect error, run the following commands:
+
+>> docker run -p 5100:5100 <image_name>
+
+>> docker run -p 5100:5100 texeech  
