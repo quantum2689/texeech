@@ -2,8 +2,10 @@ from flask import Flask,request,render_template,send_file
 from gtts import gTTS
 import os
 import uuid
+
+os.mkdir('Audio')
 app = Flask(__name__,template_folder="template")
-UPLOAD_FOLDER = os.path.join(os.getcwd(), 'texeech', 'Audio')
+UPLOAD_FOLDER = os.path.join(os.getcwd(), 'Audio')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 Id= uuid.uuid4()
 def audio(text,lang):
